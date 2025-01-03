@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000d2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    height: 85%;
+    width: 90%;
+    /* border: 1px solid #fff; */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 25px -1px #000;
+    position: relative;
+}
+
+header::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(img/money\ heist1.jpg)no-repeat center center/cover;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+header::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(180deg, transparent, #000);
+    z-index: -1;
+}
+
+header video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+header nav{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+nav .logo img{
+    width: 90px;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+}
+
+ul li{
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all .3s linear;
+}
+a{
+    text-decoration: none;
+    color: #fff; 
+}
+ul li a:hover{
+    opacity: .8;
+    text-shadow: 1px 1px 20px red, 0 0 3em blue, 0 0 0.6em blue;
+}
+#search{
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #ffffffb4;
+    color: #fff;
+    margin-right: 10px;
+}
+#search::placeholder{
+    color: #fff;
+}
+.search_movie{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+.search_movie img{
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.search_movie .searching{
+    position: absolute;
+    width: 290px;
+    height: 190px;
+    top: 40px;
+    background-color: rgba(255, 255, 255, 0.103);
+    z-index: 10;
+    backdrop-filter: blur(5px);
+    right: 0;
+    overflow-x: hidden;
+    display: none;
+}
+
+.search_movie .searching::-webkit-scrollbar{
+    width: 5px;
+    background-color: #ffffff33;
+    border-radius: 5px;
+    visibility: hidden;
+}
+.search_movie .searching::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: #ffffff33;
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+.search_movie .searching:hover::-webkit-scrollbar{
+    visibility: visible;
+}
+.search_movie .searching:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+}
+
+
+.card .cont h3 {
+    line-height: 20px;
+    font-size: 1rem;
+    text-overflow: ellipsis;
+    width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.search_movie .searching .card {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #fff;
+    padding: 2px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    z-index: 1; /* Adjusted from -1 */
+}
+
+.card .cont p {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    text-overflow: ellipsis;
+    width: 250px; /* Adjust to match layout */
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.search_movie .searching .card img{
+    width: 30px;
+    height: 90%;
+    border-radius: 3px;
+    margin-left: 8px;
+}
+
+.card .cont p span{
+    background-color: #d9ff05;
+    color: #000;
+    padding: 0 2px;
+    margin: 0 5px 0 10px;
+}
+
+/*? Content */
+
+header .content{
+    margin: 0rem 0 0 1.6rem;
+    color: #fff;
+
+}
+
+header .content h1{
+    font-size: 50px;
+}
+header .content p{
+    font-size: 11px;
+    width: 350px;
+    word-break: break-all;
+}
+header .content .details{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+    font-size: 10px;
+    cursor: pointer;
+}
+header .content .details h6{
+    color: #ffffff8c;
+    font-size: 10px;
+}
+header .content .details h5{
+    color: #20cc45;
+    font-size: 10px;
+
+}
+header .content .details h3{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+header .content .details h3 span{
+    background-color: #d9ff05;
+    color: #000;
+    padding: 0 2px;
+
+}
+
+header .content .btns{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+header .content .btns a{
+    padding: 8px 12px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #00bdff, #0079ff);
+    animation: round 1s linear infinite;
+    cursor: no-drop;
+    position: relative;
+}
+@keyframes round{
+    0%{background: linear-gradient(0deg, #00bdff, #0079ff);}    
+    12%{background: linear-gradient(45deg, #00bdff, #0079ff);}    
+    24%{background: linear-gradient(90deg, #00bdff, #0079ff);}    
+    36%{background: linear-gradient(130deg, #00bdff, #0079ff);}    
+    42%{background: linear-gradient(190deg, #00bdff, #0079ff);}    
+    60%{background: linear-gradient(245deg, #00bdff, #0079ff);}    
+    80%{background: linear-gradient(290deg, #00bdff, #0079ff);}    
+    100%{background: linear-gradient(360deg, #00bdff, #0079ff);}    
+}
+header section{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 0 1.6rem;
+    color: #fff;
+    bottom: 20px;
+}
+
+header section .cards{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    /* border: 1px solid #fff; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* overflow-x: auto; */
+    padding: 0 30px;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+}
+
+
+header section .cards::-webkit-scrollbar {
+    height: 8px; /* Set the height of the horizontal scrollbar */
+    cursor: pointer;
+}
+
+header section .cards::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light gray background for the scrollbar track */
+}
+
+header section .cards::-webkit-scrollbar-thumb {
+    background: #888; /* Dark gray color for the thumb */
+    border-radius: 4px; /* Rounded corners */
+}
+
+header section .cards::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker thumb color when hovered */
+}
+
+
+header section .cards a{
+    position: relative; 
+    min-width: 130px;
+    height: 140px;
+    /* border: 1px solid #fff; */
+    background-color: #000;
+    transition: .3s linear;
+    white-space: nowrap;
+    border-radius: 5px;
+}
+
+
+
+header section .cards .card .poster{
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+header section .cards .card:hover{
+    min-width: 250px;
+    overflow: hidden;
+
+}
+header section .cards .card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+header section .cards .card .rest_card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    opacity: 0;
+    transition: .3s linear;
+}
+header section .cards .card .rest_card img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    z-index: -1;
+
+}
+
+header section .cards .card .rest_card::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #000000);
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+}
+
+header section .cards .card .rest_card .content{
+    position: absolute;
+    width: 100%;
+    left: -30px;
+    bottom:10px;
+    color: #fff;
+    padding: 0 20px;
+}
+header section .cards .card .rest_card .content .sub-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header section .cards .card .rest_card .content .sub-title p{
+   font-size: 14px;
+   font-weight: 400;
+   opacity: 0.7;
+}
+header section .cards .card .rest_card .content .sub-title h3{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+header section .cards .card .rest_card .content .sub-title span{
+    background-color: #d9ff05;
+    color: #000;
+    padding: 0 2px;
+    border-radius: 2px;
+
+    margin: 0 5px 0 10px;
+}
+
+header section .cards .card .rest_card .content .sub-title h3 i{
+    margin-right: 4px;
+}
+
+header section .cards .card:hover .rest_card{
+    /* transform: scale(1.05); */
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.slide-left,
+.slide-right{
+    position: absolute;
+    z-index: 99;
+    font-size: 25px;
+    height: 30px;
+    width: 30px;
+    color: #000;
+    background-color: #ffffff52;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.slide-left{
+    left: 5px;
+}
+.slide-right{
+    right: 5px;
+}
+
+header section:hover .slide-left{
+    opacity: 1;
+}
+header section:hover .slide-right{
+    opacity: 1;
+}
+
+
+.tooltip {
+    position: absolute;
+    pointer-events: none; /* Ensures the tooltip doesn't block mouse events */
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+}
